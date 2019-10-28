@@ -5,6 +5,7 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 let Goods = require('../models/goods');
+let Users = require('../models/user');
 
 mongoose.connect("mongodb://127.0.0.1:27017/imooc");
 
@@ -18,7 +19,7 @@ mongoose.connection.on('disconnected',()=>{
     console.log('mongoDB disconnected')
 });
 
-
+//查询商品列表数据
 router.get('/',(req,res,next)=>{
     let page = parseInt(req.param('page'));
     let pageSize = parseInt(req.param('pageSize'));
@@ -95,11 +96,57 @@ router.get('/',(req,res,next)=>{
     //     }
     // })
 });
-//查询商品列表数据
-router.get('/list',(req,res,next)=>{
-    console.log(req.param);
-    res.json(req.param('page'));
-    let page = parseInt(req.param.page);
+
+
+//添加购物车
+router.post('/addCart',(req,res,next)=>{
+   let userId = '100000077';
+   let productId = req.body.productId;
+
+   Users.findOne({userId:userId}, (err,userDoc) =>{
+       if(err){
+           res.json({
+               status:'1',
+               msg:err.message
+           })
+       }else {
+           if(userDoc){
+               Goods.findOne({productId:productId},(err1,doc1)=>{
+              if(err1){
+                  res.json({
+                      status:'1',
+                      msg:err1.message
+                  })
+              }  else {
+                  if(doc1){
+                      Object.assign(doc1,{
+                          productNum:1,
+                          checked:1
+                      });
+                      userDoc.cartList.push(doc1);
+                      userDoc.save((err2,doc2)=>{
+                          console.log(doc2);
+                          if(err2){
+                              res.json({
+                                  'status':'1',
+                                  msg:err2.message
+                              })
+                          }else {
+                              res.json({
+                                  status:'0',
+                                  msg:'',
+                                  result:'suc'
+                              })
+                          }
+                      })
+                  }
+              }
+               })
+           }
+       }
+   })
 });
+
+
 
 module.exports = router;
