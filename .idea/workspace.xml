@@ -15,7 +15,6 @@
 >>>>>>> 1572d57a8155def0717b3ebdfbd26fcc91bd65ee
 =======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/routes/goods.js" afterPath="$PROJECT_DIR$/routes/goods.js" />
       <change beforePath="$PROJECT_DIR$/routes/users.js" afterPath="$PROJECT_DIR$/routes/users.js" />
 >>>>>>> 9a931e541a07f39490dcec83c14e419bb9627b06
     </list>
@@ -107,6 +106,7 @@
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="216">
               <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
 >>>>>>> 1572d57a8155def0717b3ebdfbd26fcc91bd65ee
@@ -115,6 +115,13 @@
               <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
 >>>>>>> 9a931e541a07f39490dcec83c14e419bb9627b06
               <folding />
+=======
+            <state relative-caret-position="1080">
+              <caret line="59" column="27" lean-forward="true" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+              <folding>
+                <element signature="e#269#852#0" expanded="false" />
+              </folding>
+>>>>>>> b2c00bd4cfc9a738b2f993673a8416bd34dea042
             </state>
           </provider>
         </entry>
@@ -317,7 +324,7 @@
       <workItem from="1571463808198" duration="9198000" />
       <workItem from="1571664017067" duration="4157000" />
       <workItem from="1571825676107" duration="22000" />
-      <workItem from="1572098907558" duration="4545000" />
+      <workItem from="1572098907558" duration="7287000" />
     </task>
     <task id="LOCAL-00001" summary="添加商品列表接口">
       <created>1571580985579</created>
@@ -334,10 +341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571670309366</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="增加 登陆接口">
+      <created>1572190130972</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572190130972</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="4105000" />
@@ -365,6 +380,9 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.49534884" order="0" side_tool="false" content_ui="combo" />
 =======
     <option name="totallyTimeSpent" value="22027000" />
+=======
+    <option name="totallyTimeSpent" value="24769000" />
+>>>>>>> b2c00bd4cfc9a738b2f993673a8416bd34dea042
   </component>
   <component name="ToolWindowManager">
     <frame x="360" y="0" width="1569" height="1048" extended-state="0" />
@@ -377,7 +395,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.096194506" sideWeight="0.50877196" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21637426" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33918127" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14152047" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -404,7 +422,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加商品列表接口" />
     <MESSAGE value="增加 添加购物车接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加 添加购物车接口" />
+    <MESSAGE value="增加 登陆接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加 登陆接口" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -475,7 +494,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
+          <folding>
+            <element signature="e#269#852#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -534,7 +555,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
+          <folding>
+            <element signature="e#269#852#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -718,6 +741,7 @@
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="297">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
@@ -734,6 +758,13 @@
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
 >>>>>>> 9a931e541a07f39490dcec83c14e419bb9627b06
+=======
+        <state relative-caret-position="1080">
+          <caret line="59" column="27" lean-forward="true" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+          <folding>
+            <element signature="e#269#852#0" expanded="false" />
+          </folding>
+>>>>>>> b2c00bd4cfc9a738b2f993673a8416bd34dea042
         </state>
       </provider>
     </entry>
