@@ -110,38 +110,65 @@ router.post('/addCart',(req,res,next)=>{
                msg:err.message
            })
        }else {
+           // console.log("userDoc:"+userDoc);
            if(userDoc){
-               Goods.findOne({productId:productId},(err1,doc1)=>{
-              if(err1){
-                  res.json({
-                      status:'1',
-                      msg:err1.message
-                  })
-              }  else {
-                  if(doc1){
-                      Object.assign(doc1,{
-                          productNum:1,
-                          checked:1
-                      });
-                      userDoc.cartList.push(doc1);
-                      userDoc.save((err2,doc2)=>{
-                          console.log(doc2);
-                          if(err2){
-                              res.json({
-                                  'status':'1',
-                                  msg:err2.message
-                              })
-                          }else {
-                              res.json({
-                                  status:'0',
-                                  msg:'',
-                                  result:'suc'
-                              })
-                          }
-                      })
+               let goodsItem ="";
+               userDoc.cartList.forEach((item,index)=>{
+                  if(item.productId == productId){
+                      goodsItem = item;
+                      item.productNum++;
                   }
-              }
-               })
+               });
+
+               if(goodsItem){
+                   userDoc.save((error,saveDoc)=>{
+                       if(error){
+                           res.json({
+                               status:'1',
+                               msg:error.message
+                           })
+                       }else {
+                           res.json({
+                               status:'0',
+                               msg:'',
+                               result:'suc',
+                           })
+                       }
+                   })
+               }else {
+                   Goods.findOne({productId:productId},(err1,doc1)=>{
+                       if(err1){
+                           res.json({
+                               status:'1',
+                               msg:err1.message
+                           })
+                       }  else {
+                           if(doc1){
+                               Object.assign(doc1,{
+                                   productNum:1,
+                                   checked:1
+                               });
+                               userDoc.cartList.push(doc1);
+                               userDoc.save((err2,doc2)=>{
+                                   // console.log(doc2);
+                                   if(err2){
+                                       res.json({
+                                           'status':'1',
+                                           msg:err2.message
+                                       })
+                                   }else {
+                                       res.json({
+                                           status:'0',
+                                           msg:'',
+                                           result:'suc'
+                                       })
+                                   }
+                               })
+                           }
+                       }
+                   })
+               }
+
            }
        }
    })
